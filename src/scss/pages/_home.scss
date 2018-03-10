@@ -1,0 +1,16 @@
+section {
+    min-height: 400px;
+}
+
+#hero {
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/737557/pexels-photo-737557.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) no-repeat center;
+    background-size: cover;
+
+
+    .logo-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 50%)
+    }
+}

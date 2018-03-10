@@ -1,3 +1,10 @@
 header {
-	position: relative;
+	position: fixed;
+	width: 100vw;
+}
+
+.logo-wrapper-header {
+	height: 10em;
+	width: 10em;
+	margin-top: 2em;
 }

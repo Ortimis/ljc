@@ -29,6 +29,7 @@ $breakpoints: ('xs': $xs, 'sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
 $white: #fff;
 $black: #000;
 $light-grey: #f0f0f0;
+$red: red;
 
 // custom colours
 
@@ -37,7 +38,7 @@ $colours: ('white': $white, 'black': $black, 'light-grey': $light-grey);
 /*-------------------------
 *  Typography
 *--------------------------*/
-$base-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $base-fs: 18px;
 

@@ -25,21 +25,21 @@ class Custom
 	public function custom_post_type() 
 	{
 		$labels = array(
-			'name'               => _x( 'Books', 'post type general name', 'ljc' ),
-			'singular_name'      => _x( 'Book', 'post type singular name', 'ljc' ),
-			'menu_name'          => _x( 'Books', 'admin menu', 'ljc' ),
-			'name_admin_bar'     => _x( 'Book', 'add new on admin bar', 'ljc' ),
+			'name'               => _x( 'Arbeitsphasen', 'post type general name', 'ljc' ),
+			'singular_name'      => _x( 'Arbeitsphase', 'post type singular name', 'ljc' ),
+			'menu_name'          => _x( 'Arbeitsphasen', 'admin menu', 'ljc' ),
+			'name_admin_bar'     => _x( 'Arbeitsphase', 'add new on admin bar', 'ljc' ),
 			'add_new'            => _x( 'Add New', 'book', 'ljc' ),
-			'add_new_item'       => __( 'Add New Book', 'ljc' ),
-			'new_item'           => __( 'New Book', 'ljc' ),
-			'edit_item'          => __( 'Edit Book', 'ljc' ),
-			'view_item'          => __( 'View Book', 'ljc' ),
-			'view_items'         => __( 'View Books', 'ljc' ),
-			'all_items'          => __( 'All Books', 'ljc' ),
-			'search_items'       => __( 'Search Books', 'ljc' ),
-			'parent_item_colon'  => __( 'Parent Books:', 'ljc' ),
-			'not_found'          => __( 'No books found.', 'ljc' ),
-			'not_found_in_trash' => __( 'No books found in Trash.', 'ljc' )
+			'add_new_item'       => __( 'Add New Arbeitsphase', 'ljc' ),
+			'new_item'           => __( 'New Arbeitsphase', 'ljc' ),
+			'edit_item'          => __( 'Edit Arbeitsphase', 'ljc' ),
+			'view_item'          => __( 'View Arbeitsphase', 'ljc' ),
+			'view_items'         => __( 'View Arbeitsphasen', 'ljc' ),
+			'all_items'          => __( 'All Arbeitsphasen', 'ljc' ),
+			'search_items'       => __( 'Search Arbeitsphasen', 'ljc' ),
+			'parent_item_colon'  => __( 'Parent Arbeitsphasen:', 'ljc' ),
+			'not_found'          => __( 'No Arbeitsphasen found.', 'ljc' ),
+			'not_found_in_trash' => __( 'No Arbeitsphasen found in Trash.', 'ljc' )
 		);
 
 		$args = array(
@@ -51,15 +51,15 @@ class Custom
 			'show_in_menu'       => true,
 			'menu_icon'          => 'dashicons-book-alt',
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'book' ),
+			'rewrite'            => array( 'slug' => 'phase' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
-			'menu_position'      => 5, // below post
-			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+			'menu_position'      => 2, 
+			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
 
-		register_post_type( 'book', $args );
+		register_post_type( 'phase', $args );
 	}
 
 	/**

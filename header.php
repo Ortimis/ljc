@@ -25,26 +25,25 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<div class="container container-fluid">
+			<div class="container">
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-4">
 
 						<div class="site-branding">
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-							<?php
-							$description = get_bloginfo( 'description', 'display' );
-							if ( $description || is_customize_preview() ) : ?>
-							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-							<?php
-						endif; ?>
-					</div><!-- .site-branding -->
+							<h1 class="site-title hide"> <?php bloginfo( 'name' ); ?> </h1>
+							<div class="logo-wrapper-header">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/LJC-Logo_Weiss.svg" alt="Landesjugendchor Baden-Württemberg">
+							</div>
+							
+						</div><!-- .site-branding -->
 
 				</div><!-- .col -->
 
 				<div class="col-xs-12 col-sm-8">
-
+				
 					<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
 						<?php
 						if ( has_nav_menu( 'primary' ) ) :
 							wp_nav_menu( array(

@@ -8,7 +8,10 @@ import 'slick-carousel';
 
 // Import custom modules
 import App from'./modules/app.js';
-import Carousel from './modules/carousel.js';
+import Navigation from './modules/navigation.js';
+import Parallax from './modules/parallax.js';
 
+//Get it running baby!
 const app = new App();
-const carousel = new Carousel();
+const navigation = new Navigation();
+const parallax = new Parallax();
