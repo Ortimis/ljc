@@ -1,0 +1,103 @@
+{
+    "key": "group_5aa508fa1d92e",
+    "title": "Konzerte",
+    "fields": [
+        {
+            "key": "field_5aa50abbc0967",
+            "label": "Konzertort",
+            "name": "konzertort",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Bibliothekssaal der Landesakademie Ochsenhausen",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5aa50953443ed",
+            "label": "Beginn: Datum und Uhrzeit",
+            "name": "datum_und_uhrzeit",
+            "type": "date_time_picker",
+            "instructions": "Diese Uhrzeit ist öffentlich einsehbar.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d.m.Y H:i",
+            "return_format": "d.m.Y H:m",
+            "first_day": 1
+        },
+        {
+            "key": "field_5aa509d1443ef",
+            "label": "Ende: Datum und Uhrzeit.",
+            "name": "datum_und_uhrzeit_ende",
+            "type": "date_time_picker",
+            "instructions": "Ab diesem Zeitpunkt wird das Konzert nicht mehr auf der Homepage angezeigt.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d.m.Y H:i",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_5aa50f9ece6c5",
+            "label": "Einer Phase zuordnen",
+            "name": "einer_phase_zuordnen",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "phase"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "konzert"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1520770990
+}

@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-<section id="hero">
+<section id="hero" data-vide-bg="path/to/video" data-vide-options="loop: false, muted: false, position: 0% 0%">
 	<div class="menu-push"></div>
 	<div class="container">
 		<div  class="logo-wrapper">
@@ -27,7 +27,10 @@ get_header(); ?>
 
 	
 
-<?php get_template_part( 'fpsections/section', 'ausschreibung' ); // Wird nur angezeigt, wenn eine Phase mit "Status: Ausschreibung" vorhanden ist.?>
+<?php get_template_part( 'fpsections/section', 'ausschreibung' ); // Wird nur angezeigt, wenn eine Phase mit "Status: Ausschreibung" vorhanden ist. ?>
+<?php get_template_part( 'fpsections/section', 'konzerte' ); // Wird nur angezeigt, wenn mindestens ein Konzert noch nicht stattgefunden hat. ?>
+
+<?php get_template_part( 'fpsections/section', 'aktuelles' ); // Wird immer angezeigt. Blog + Jubiläum ?>
 
 
 

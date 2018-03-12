@@ -15,15 +15,11 @@
 
 	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php
-				/* translators: %s: Github repo URL. */
-				echo esc_url( __( 'https://github.com/Alecaddd/ljc', 'ljc' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'ljc' ), 'ljc' ); ?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: %1: Theme name. */
-
-				/* translators: %2: Author name. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ljc' ), 'ljc', '<a href="http://alecaddd.com/" rel="designer">Alecaddd</a>' ); ?>
+			<div class="container">
+				<div class="row">
+					Landesjugendchor Baden-Württemberg
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

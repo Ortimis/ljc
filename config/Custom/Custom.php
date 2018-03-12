@@ -49,18 +49,60 @@ class Custom
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'menu_icon'          => 'dashicons-book-alt',
+			'menu_icon'          => 'dashicons-plus',
 			'query_var'          => true,
 			'rewrite'            => array( 'slug' => 'phase' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
-			'menu_position'      => 2, 
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'menu_position'      => 0, 
+			'supports'           => array( 'title', 'thumbnail' )
 		);
 
 		register_post_type( 'phase', $args );
+
+		{
+			$labels = array(
+				'name'               => _x( 'Konzerte', 'post type general name', 'ljc' ),
+				'singular_name'      => _x( 'Konzert', 'post type singular name', 'ljc' ),
+				'menu_name'          => _x( 'Konzerte', 'admin menu', 'ljc' ),
+				'name_admin_bar'     => _x( 'Konzert', 'add new on admin bar', 'ljc' ),
+				'add_new'            => _x( 'Add New', 'Konzert', 'ljc' ),
+				'add_new_item'       => __( 'Add New Konzerte', 'ljc' ),
+				'new_item'           => __( 'New Konzert', 'ljc' ),
+				'edit_item'          => __( 'Edit Konzerte', 'ljc' ),
+				'view_item'          => __( 'View Konzerte', 'ljc' ),
+				'view_items'         => __( 'View Konzerte', 'ljc' ),
+				'all_items'          => __( 'All Konzerte', 'ljc' ),
+				'search_items'       => __( 'Search Konzerte', 'ljc' ),
+				'parent_item_colon'  => __( 'Parent Konzerte:', 'ljc' ),
+				'not_found'          => __( 'No Konzerte found.', 'ljc' ),
+				'not_found_in_trash' => __( 'No Konzerte found in Trash.', 'ljc' )
+			);
+	
+			$args = array(
+				'labels'             => $labels,
+				'description'        => __( 'Description.', 'ljc' ),
+				'public'             => true,
+				'publicly_queryable' => true,
+				'show_ui'            => true,
+				'show_in_menu'       => true,
+				'menu_icon'          => 'dashicons-tickets-alt',
+				'query_var'          => true,
+				'rewrite'            => array( 'slug' => 'konzert' ),
+				'capability_type'    => 'post',
+				'has_archive'        => false,
+				'hierarchical'       => false,
+				'menu_position'      => 0, 
+				'supports'           => array( 'title', 'editor', 'thumbnail' )
+			);
+	
+			register_post_type( 'konzert', $args );
+		}
 	}
+
+
+
 
 	/**
 	 * Flush Rewrite on CPT activation
@@ -70,6 +112,7 @@ class Custom
 	{   
 		// call the CPT init function
 		$this->custom_post_type();
+		$this->custom_post_type_konzert();
 
 		// Flush the rewrite rules only on theme activation
 		flush_rewrite_rules();

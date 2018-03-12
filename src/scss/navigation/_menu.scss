@@ -4,7 +4,7 @@
     position: absolute;
 	float: left;
     width: 100%;
-    margin-top: 2em;
+    margin-top: 4em;
     height: 4em;
     
 
@@ -63,6 +63,8 @@
 		&:hover > a,
 		&.focus > a {
 		}
+
+
 	}
 
 	a {
@@ -82,6 +84,15 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	
+
+	li {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+		background-color: $red;
+		transition: all ease-in-out .2s;
+	}
 }
 
 @media screen and (min-width: 37.5em) {
@@ -112,4 +123,12 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+
+#menu-toggle, #menu-toggle:focus {
+	background-color: transparent;
+	font-size: 3rem;
+	color: white;
+	box-shadow: none;
+	border: none;
 }

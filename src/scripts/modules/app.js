@@ -1,27 +1,17 @@
-class App {
+export default function App() {	
+	console.log('App initialized');
+	var topmenu = document.getElementById('masthead');
+	console.log(topmenu);
 
-	constructor() {
-		this.el = document.querySelector( '.el' );
+		window.onscroll = function () {
+			var startetscroll = scrollY;
 
-		this.listeners();
-		this.init();
-	}
+			console.log(startetscroll);
 
-	init() {
-		console.info( 'App Initialized' );
-	}
-
-	listeners() {
-		if ( this.el ) {
-			this.el.addEventListener( 'click', this.elClick );
+			if (startets > 100 ) {
+				topmenu.style.backgroundColor("#9D0000");
+			}
 		}
-	}
 
-	elClick( e ) {
-		e.target.classList.add( 'text-light-grey' );
-		e.target.addEventListener( 'transitionend', ( e ) => ( 'color' === e.propertyName ) ? e.target.classList.remove( 'text-light-grey' ) : '' );
-	}
 
 }
-
-export default App;
